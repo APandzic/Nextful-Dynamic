@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @screen sm {
+  body {
+    background-color: black
+  }
+} */
+
+/* @layer base {} */
+* {
+  @apply font-primary;
+}
+
+@layer base {
+  html {
+    @apply font-primary bg-primary-bg;
+  }
+}
+
+/* a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+input,
+textarea,
+select,
+button {
+  @apply text-primary-text;
+} */
+
+@layer components {
+  .theme-primary {
+    @apply bg-primary-bg text-primary-text;
+  }
+
+  .theme-secondary {
+    @apply bg-secondary-bg text-secondary-text;
+  }
+
+
+  .submenu-animation-desktop {
+    @apply h-0 opacity-0 overflow-hidden transition-all duration-500;
+  }
+
+  .submenu-animation-desktop-active {
+    @apply opacity-100 h-header-desktop-submenu;
+  }
+
+  .container-outer {
+    @apply w-screen;
+  }
+
+  .container-inner {
+    @apply max-w-[1536px] 3xl:max-w-[1920px] mx-auto;
+  }
+
+  .btn-large-primary {
+    @apply inline-block text-[1rem] text-center font-semibold text-primary-btn-text bg-primary-btn-bg px-6 py-4 hover:bg-primary-btn-hover min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+    transition: all 0.3s, transform 0.3s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+  }
+  .btn-large-primary:hover {
+    transform: scale(1.04, 1.02);
+  }
+
+  .btn-large-secondary {
+    @apply inline-block text-[1rem] text-center font-semibold text-secondary-btn-text bg-secondary-btn-bg px-6 py-4 hover:bg-secondary-btn-hover min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+    transition: all 0.3s, transform 0.3s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+  }
+  .btn-large-secondary:hover {
+    transform: scale(1.04, 1.02);
+  }
+
+  .btn-small-primary {
+    @apply inline-block text-[1rem] text-center font-semibold text-primary-btn-text bg-primary-btn-bg px-4 py-3 hover:bg-primary-btn-hover min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+    transition: all 0.3s, transform 0.3s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+  }
+  .btn-small-primary:hover {
+    transform: scale(1.04, 1.02);
+  }
+
+  .btn-small-secondary {
+    @apply inline-block text-[1rem] text-center font-semibold text-secondary-btn-text bg-secondary-btn-bg px-4 py-3 hover:bg-secondary-btn-hover min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+    transition: all 0.3s, transform 0.3s cubic-bezier(0.25, 0.4, 0.55, 1.4);
+  }
+
+  .btn-small-secondary:hover {
+    transform: scale(1.04, 1.02);
+  }
+
+  /*/ Disabled Buttons /*/
+
+  .btn-small-disabled-primary {
+    @apply inline-block text-[1rem] text-center font-semibold text-primary-btn-disabled-text bg-primary-btn-disabled-bg px-4 py-3 min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+  }
+
+  .btn-small-disabled-secondary {
+    @apply inline-block text-[1rem] text-center font-semibold text-secondary-btn-disabled-text bg-secondary-btn-disabled-bg px-4 py-3 min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+  }
+
+  .btn-large-disabled-primary {
+    @apply inline-block text-[1rem] text-center font-semibold text-primary-btn-disabled-text px-6 py-4 bg-primary-btn-disabled-bg min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+  }
+
+  .btn-large-disabled-secondary {
+    @apply inline-block text-[1.125rem] text-center font-semibold text-secondary-btn-disabled-text px-6 py-4 bg-primary-btn-disabled-bg min-w-[110px];
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+  }
+
+  /* .btn-small-disabled {
+    @apply inline-block text-[1rem] text-center font-semibold text-btn-disabled-text px-4 py-3 bg-btn-disabled-bg;
+    line-height: 110%;
+    font-style: normal;
+    border-radius: 1000px;
+  } */
+
+  /* Typography */
+  .h1 {
+    @apply text-4xl lg:text-6xl xl:text-7xl font-semibold;
+    line-height: 130%;
+    letter-spacing: -1%;
+  }
+  .h2 {
+    @apply text-5xl font-semibold;
+    line-height: 140%;
+  }
+  .h3 {
+    @apply text-2xl font-semibold;
+    line-height: 130%;
+    letter-spacing: -1%;
+  }
+  .h4 {
+    @apply text-xl font-semibold;
+    font-size: 1.25rem;
+    line-height: 150%;
+  }
+  .h5 {
+    @apply font-semibold text-lg;
+    line-height: 150%;
+  }
+  .overline {
+    @apply font-medium text-sm;
+    line-height: 150%;
+    letter-spacing: 5%;
+  }
+  .body20 {
+    @apply font-normal text-xl;
+    line-height: 150%;
+  }
+  .body20-bold {
+    @apply font-semibold text-xl;
+    line-height: 150%;
+  }
+  .body18 {
+    @apply font-normal text-lg;
+    line-height: 150%;
+  }
+  .body18-bold {
+    @apply font-semibold text-lg;
+    line-height: 150%;
+  }
+  .body16 {
+    @apply font-normal text-base;
+    line-height: 150%;
+  }
+  .body16-bold {
+    @apply font-semibold text-base;
+    line-height: 150%;
+  }
+  .body14 {
+    @apply font-normal text-sm;
+    line-height: 150%;
+  }
+  .body14-bold {
+    @apply font-semibold text-sm;
+    line-height: 150%;
+  }
+  .body12 {
+    @apply font-normal text-xs;
+    line-height: 150%;
+  }
+  .body12-bold {
+    @apply font-semibold text-xs;
+    line-height: 150%;
+  }
+}
